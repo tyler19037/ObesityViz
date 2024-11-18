@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau Embed</title>
+    <style>
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid #388E3C;
+            font-size: 3rem;
+        }
+        
+        header h1 {
+            font-size: 1.4rem;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #d1ffd1;
+        }
+
+        .tableau-container {
+            max-width: 100%;
+            position: relative;
+            padding-bottom: 75%; 
+            height: 0;
+            overflow: hidden;
+            background: #f4f4f4;
+        }
+        
+        .tableau-container iframe,
+        .tableau-container object {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 800px) {
+            .tableau-container {
+                padding-bottom: 85%; 
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .tableau-container {
+                padding-bottom: 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Obesity's Adverse Effect on Health</header>
+    <p>
+        <span class="source">
+            The top left bar graph depicts the growth of obesity over the years with hover interactions, the top right graph shows a pie chart of overweight and obese people compared with normal weight and under weight people with over 50% of people being overweight, the bottom right visualization is a stacked bar chart depicting all the causes of death as well as how impactful they are, and the bottom right visualization shows a line chart of the growth of those causes of death.  There is hover interaction between the bottom two charts that highlights same diseases. <br>
+            <br>The visualizations are intended to capture the growing trends in obesity and their correlation with rising deaths to certain diseases like heart disease and cancer. The top left bar chart shows how there is a steady growth of obesity and the top right pie chart reveals how the majority of the population is obese.  These come together to provide evidence for the growth in deaths to diseases shown in the bottom charts.  Heart disease and cancer both have high mortality rates and the deaths to those increases with the growth in obese people<br>
+            <br>Sources: The data on deaths to diseases and obesity statistics from the United States is taken from <a href="https://catalog.data.gov/dataset/nchs-leading-causes-of-death-united-states/resource/9096aa3c-0d4b-42f1-bb01-284816d92a15" target="_blank">NCHS Leading Causes of Death, United States</a>
+            and <a href="https://catalog.data.gov/dataset/nchs-leading-causes-of-death-united-states/resource/9096aa3c-0d4b-42f1-bb01-284816d92a15" target="_blank">BRFSS: Table of Overweight and Obesity (BMI)
+            </a>
+        </span>
+    </p>
+    <div class="tableau-container" id="viz1731970916001">
+        <noscript>
+            <a href='#'>
+                <img alt='Obesity&#39;s Adverse Affect on Health' 
+                    src='https://public.tableau.com/static/images/Ob/ObesityinAmerica_17319708584150/ObesitysAdverseAffectonHealth/1_rss.png' 
+                    style='border: none'/>
+            </a>
+        </noscript>
+        <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+            <param name="embed_code_version" value="3"/>
+            <param name="site_root" value=""/>
+            <param name="name" value="ObesityinAmerica_17319708584150/ObesitysAdverseAffectonHealth"/>
+            <param name="tabs" value="no"/>
+            <param name="toolbar" value="yes"/>
+            <param name="static_image" value="https://public.tableau.com/static/images/Ob/ObesityinAmerica_17319708584150/ObesitysAdverseAffectonHealth/1.png"/>
+            <param name="animate_transition" value="yes"/>
+            <param name="display_static_image" value="yes"/>
+            <param name="display_spinner" value="yes"/>
+            <param name="display_overlay" value="yes"/>
+            <param name="display_count" value="yes"/>
+            <param name="language" value="en-US"/>
+            <param name="filter" value="publish=yes"/>
+        </object>
+    </div>
+
+    <script type="text/javascript">
+        var divElement = document.getElementById('viz1731970916001');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        
+        if (divElement.offsetWidth > 800) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        } else if (divElement.offsetWidth > 500) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '1327px';
+        }
+
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
+</body>
+</html>
